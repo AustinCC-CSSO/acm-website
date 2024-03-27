@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button } from '@/components/ui/button';
 import { TypographyH1, TypographyP } from '@/components/typography/typography';
 import { Input } from '@/components/ui/input';
-import RegistrationForm from '@/components/form';
+import RegistrationForm from '@/components/registration-form';
 import { useTheme } from 'next-themes';
 import { NavbarHackathon } from '@/components/navbar';
 import { HackerDashboard } from '@/components/hacker-dashboard';
