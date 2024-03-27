@@ -24,20 +24,13 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import RiverhacksNavbar from '@/components/navbar';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
 
 export default function RiverhacksLanding() {
-	const { resolvedTheme, setTheme } = useTheme();
 
-	React.useEffect(() => {
-		if (resolvedTheme === 'system') {
-			setTheme(
-				window.matchMedia &&
-					window.matchMedia('(prefers-color-scheme: dark)').matches
-					? 'dark'
-					: 'light'
-			);
-		}
-	}, [resolvedTheme, setTheme]);
 
 	return (
 		<div className="relative flex min-h-screen flex-col bg-gradient-to-b from-indigo-200 to-orange-500 dark:from-purple-950 dark:to-orange-300">
@@ -52,28 +45,27 @@ export default function RiverhacksLanding() {
 							id="hero">
 							<div className="flex flex-col items-center justify-center px-5 space-y-10 md:mx-16 md:flex-row md:space-x-20 md:space-y-0">
 								<div className="flex flex-col space-y-4 md:w-1/2">
-									<Button
-										variant="outline"
-										className="self-start">
-										🎉 Update
-									</Button>
+									<Badge>
+										<p>
+											🎉 We&apos;ve changed names! -&gt;</p>
+									</Badge>
 									<TypographyH1>Riverhacks 2024</TypographyH1>
-									<TypographyMuted className='text-center'>
+									<TypographyMuted className='text-left'>
 										24 Hours<br />
 										ACC Rio Grande Campus<br />
 										April 13 - 14, 2024
 									</TypographyMuted>
-									<Button variant="outline">Registration Coming Soon</Button>
+									<Link href="/riverhacks/register"><Button variant="outline">Register Now</Button></Link>
 								</div>
 								<div className="md:w-1/2">
-									<Image
+									{/* <Image
 										src={`/logo${resolvedTheme === 'dark' ? 'Dark' : 'Light'
 											}.svg`}
 										alt="Riverhacks"
 										width={512}
 										height={512}
 										className='hidden md:inline'
-									/>
+									/> */}
 								</div>
 							</div>
 						</section>
@@ -122,10 +114,10 @@ export default function RiverhacksLanding() {
 							{/* Add sponsor logos or details */}
 						</section>
 					</div>
-				</div>
-			</main>
+				</div >
+			</main >
 			<Footer />
-		</div>
+		</div >
 	);
 }
 
