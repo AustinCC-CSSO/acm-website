@@ -183,13 +183,9 @@ export function NavbarHackathon() {
                     {isSmallScreen && (
                         <Image src={`/logo${resolvedTheme === 'dark' ? 'Dark' : 'Light'}.svg`} alt='ACC ACM Logo' height={48} width={48} className='ml-5 my-3' />
                     )}
-                    <Link href='/' passHref><div className='p-5 min-w-fit'>
-                        <TypographyH3 className='xs:hidden'>ACC</TypographyH3>
-                        <TypographyH4 className='hidden xs:block sm:line-clamp-1'>Austin Community College</TypographyH4>
-                        <TypographyMuted className='text-xs xs:hidden'>ACM</TypographyMuted>
-                        <TypographyMuted className='hidden xs:block'>Association for Computing Machinery</TypographyMuted>
-                        <TypographyLead className='hidden md:hidden'>Association for Computing Machinery</TypographyLead>
-                        <TypographyMuted className=''>Student Chapter</TypographyMuted>
+                    <Link href='/riverhacks/' passHref><div className='p-5 min-w-fit '>
+                        <TypographyH3 className=''>RiverHacks 2024</TypographyH3>
+                        <TypographyMuted className=''>Hosted by the ACC ACM Student Chapter</TypographyMuted>
                     </div></Link>
                 </div>
                 <div className='flex flex-1 items-center justify-end space-x-2 pr-6'>
