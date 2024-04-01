@@ -3,6 +3,7 @@
 import * as React from 'react';
 import Footer from '@/components/footer';
 import Navbar, { NavbarHackathon } from '@/components/navbar';
+import Link from 'next/link';
 import {
 	TypographyH1,
 	TypographyH2,
@@ -63,7 +64,9 @@ export default function RiverhacksLanding() {
 										ACC Rio Grande Campus<br />
 										April 13 - 14, 2024
 									</TypographyMuted>
-									<Button variant="outline">Registration Coming Soon</Button>
+									<Link href="https://riverhacks.austincs.org/register">
+										<Button variant="outline">Register Now</Button>
+									</Link>
 								</div>
 								<div className="md:w-1/2">
 									<Image
