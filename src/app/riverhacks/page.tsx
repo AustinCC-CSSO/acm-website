@@ -64,7 +64,7 @@ export default function RiverhacksLanding() {
 										ACC Rio Grande Campus<br />
 										April 13 - 14, 2024
 									</TypographyMuted>
-									<Link href="https://riverhacks.austincs.org/register">
+									<Link href="https://riverhacks.austincs.org">
 										<Button variant="outline">Register Now</Button>
 									</Link>
 								</div>
